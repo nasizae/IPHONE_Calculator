@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.Дз7" parent="Base.Theme.Дз7" />
+
+    <style name="Theme.Дз7.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Дз7.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Дз7.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

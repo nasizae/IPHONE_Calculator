@@ -2,6 +2,7 @@ package com.example.a7;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity{
         Button seven_button=findViewById(R.id.seven);
         Button eight_button=findViewById(R.id.eight);
         Button nine_button=findViewById(R.id.nine);
+        Button zero_button=findViewById(R.id.zero);
         Button dote_button=findViewById(R.id.dote);
 
         Button plus_button=findViewById(R.id.plus);
@@ -35,11 +37,15 @@ public class MainActivity extends AppCompatActivity{
         Button equal_button=findViewById(R.id.equal);
 
         Button clear_button=findViewById(R.id.clear);
+        Button next=findViewById(R.id.next);
 
 
+        next.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this,NextActivity.class);
+            startActivity(intent);
+            finish();
 
-
-
+        });
         one_button.setOnClickListener(view -> {
             onNumberClick(view);
         });
@@ -67,6 +73,11 @@ public class MainActivity extends AppCompatActivity{
         nine_button.setOnClickListener(view -> {
             onNumberClick(view);
         });
+
+        zero_button.setOnClickListener(view -> {
+            onNumberClick(view);
+        });
+
         dote_button.setOnClickListener(view -> {
             onNumberClick(view);
         });
@@ -86,9 +97,11 @@ public class MainActivity extends AppCompatActivity{
         });
         equal_button.setOnClickListener(view -> {
             onOperationClick(view);
+                next.setAlpha(1);
         });
         clear_button.setOnClickListener(view -> {
             onOperationClick(view);
+            next.setAlpha(0);
         });
 
     }
