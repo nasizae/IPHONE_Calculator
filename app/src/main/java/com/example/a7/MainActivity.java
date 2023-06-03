@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity{
 
         next.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this,NextActivity.class);
+            intent.putExtra("rezult:",result.toString());
             startActivity(intent);
             finish();
 
